@@ -1,6 +1,7 @@
 import { getCurrentMonthRange, getCurrentWeekRange } from "./expense-tracking/period.js";
 import type { Transaction } from "./expense-tracking/schema.js";
 import { insertTransaction, listTransactionsByPeriod } from "./expense-tracking/transactions.js";
+import { CLARIFICATION_REQUEST } from "./financial-queries/clarification-request.js";
 import { formatExpenseConfirmation } from "./financial-queries/expense-confirmation.js";
 import { answerSpendingQuery } from "./financial-queries/spending-answer.js";
 import type { Period, QuerySpendingIntent, RegisterExpenseIntent } from "./message-intent-parsing/intent.js";
@@ -16,7 +17,7 @@ export async function handleOwnerMessage(text: string): Promise<string> {
     case "query_spending":
       return answerSpendingQuery(intent, await listTransactionsForQuery(intent, now));
     case "unknown":
-      return "Ainda não sei responder isso.";
+      return CLARIFICATION_REQUEST;
   }
 }
 

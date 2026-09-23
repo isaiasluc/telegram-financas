@@ -47,8 +47,8 @@
 
 ## 7. Resposta a mensagens não compreendidas
 
-- [ ] 7.1 Quando `intent = unknown`, responder pedindo esclarecimento sem persistir nada
-- [ ] 7.2 Testar com mensagem ambígua/fora do domínio (ex: "oi", "bom dia")
+- [x] 7.1 Quando `intent = unknown`, responder pedindo esclarecimento sem persistir nada
+- [x] 7.2 Testar com mensagem ambígua/fora do domínio (ex: "oi", "bom dia")
 
 ## 8. Polimento
 
