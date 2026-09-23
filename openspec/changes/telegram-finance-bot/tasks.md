@@ -52,7 +52,7 @@
 
 ## 8. Polimento
 
-- [ ] 8.1 Formatar valores monetários em reais (R$) nas respostas
-- [ ] 8.2 Adicionar logs básicos (mensagem recebida, intenção classificada, ação tomada) para debug
-- [ ] 8.3 Revisar `.gitignore` (`.env`, `node_modules`)
-- [ ] 8.4 Escrever README com instruções de setup (Docker, .env, criação do bot no @BotFather)
+- [x] 8.1 Formatar valores monetários em reais (R$) nas respostas
+- [x] 8.2 Adicionar logs básicos (mensagem recebida, intenção classificada, ação tomada) para debug
+- [x] 8.3 Revisar `.gitignore` (`.env`, `node_modules`)
+- [x] 8.4 Escrever README com instruções de setup (Docker, .env, criação do bot no @BotFather)
