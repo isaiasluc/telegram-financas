@@ -39,11 +39,11 @@
 
 ## 6. Fluxo de consultas (ponta a ponta)
 
-- [ ] 6.1 Quando `intent = query_spending` com `query_type = total_by_period`, buscar transações do período e responder com o total formatado
-- [ ] 6.2 Quando `query_type = biggest_expense`, buscar transações do período e responder com a de maior valor (descrição, valor, data)
-- [ ] 6.3 Quando `query_type = total_by_category`, buscar transações do período filtradas por categoria e responder com o total
-- [ ] 6.4 Tratar período sem transações em cada tipo de consulta com resposta apropriada ("nenhum gasto registrado")
-- [ ] 6.5 Testar ponta a ponta: "quanto gastei essa semana?", "qual foi meu maior gasto do mês?", "quanto gastei com alimentação esse mês?"
+- [x] 6.1 Quando `intent = query_spending` com `query_type = total_by_period`, buscar transações do período e responder com o total formatado
+- [x] 6.2 Quando `query_type = biggest_expense`, buscar transações do período e responder com a de maior valor (descrição, valor, data)
+- [x] 6.3 Quando `query_type = total_by_category`, buscar transações do período filtradas por categoria e responder com o total
+- [x] 6.4 Tratar período sem transações em cada tipo de consulta com resposta apropriada ("nenhum gasto registrado")
+- [x] 6.5 Testar ponta a ponta: "quanto gastei essa semana?", "qual foi meu maior gasto do mês?", "quanto gastei com alimentação esse mês?"
 
 ## 7. Resposta a mensagens não compreendidas
 
