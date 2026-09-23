@@ -32,9 +32,9 @@
 
 ## 5. Fluxo de registro de gasto (ponta a ponta)
 
-- [ ] 5.1 Conectar `telegram-gateway` → `message-intent-parsing`: mensagem recebida do dono é enviada para parsing
-- [ ] 5.2 Quando `intent = register_expense`, persistir via `insertTransaction`, incluindo `raw_message`
-- [ ] 5.3 Responder confirmando valor, descrição e categoria registrados (financial-queries: confirmação de registro)
+- [x] 5.1 Conectar `telegram-gateway` → `message-intent-parsing`: mensagem recebida do dono é enviada para parsing
+- [x] 5.2 Quando `intent = register_expense`, persistir via `insertTransaction`, incluindo `raw_message`
+- [x] 5.3 Responder confirmando valor, descrição e categoria registrados (financial-queries: confirmação de registro)
 - [ ] 5.4 Testar ponta a ponta: enviar "almoço em churrascaria do arnaldo 18,96" pelo Telegram e confirmar linha criada no banco e resposta de confirmação recebida
 
 ## 6. Fluxo de consultas (ponta a ponta)
