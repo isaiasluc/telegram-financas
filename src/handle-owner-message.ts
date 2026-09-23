@@ -10,6 +10,7 @@ import { parseMessage } from "./message-intent-parsing/parse-message.js";
 export async function handleOwnerMessage(text: string): Promise<string> {
   const now = new Date();
   const intent = await parseMessage(text, now);
+  console.log(`Intenção classificada: ${JSON.stringify(intent)}`);
 
   switch (intent.intent) {
     case "register_expense":
@@ -17,23 +18,28 @@ export async function handleOwnerMessage(text: string): Promise<string> {
     case "query_spending":
       return answerSpendingQuery(intent, await listTransactionsForQuery(intent, now));
     case "unknown":
+      console.log("Esclarecimento solicitado, nada persistido");
       return CLARIFICATION_REQUEST;
   }
 }
 
-function registerExpense(intent: RegisterExpenseIntent, rawMessage: string): Promise<Transaction> {
-  return insertTransaction({
+async function registerExpense(intent: RegisterExpenseIntent, rawMessage: string): Promise<Transaction> {
+  const transaction = await insertTransaction({
     amountCents: intent.amountCents,
     description: intent.description,
     category: intent.category,
     paymentMethod: intent.paymentMethod,
     rawMessage,
   });
+  console.log(`Gasto registrado: id ${transaction.id}`);
+  return transaction;
 }
 
-function listTransactionsForQuery(query: QuerySpendingIntent, now: Date): Promise<Transaction[]> {
+async function listTransactionsForQuery(query: QuerySpendingIntent, now: Date): Promise<Transaction[]> {
   const { start, end } = getPeriodRange(query.period, now);
-  return listTransactionsByPeriod(start, end);
+  const transactions = await listTransactionsByPeriod(start, end);
+  console.log(`Consulta ${query.queryType}: ${transactions.length} transações entre ${start.toISOString()} e ${end.toISOString()}`);
+  return transactions;
 }
 
 function getPeriodRange(period: Period, now: Date): { start: Date; end: Date } {
