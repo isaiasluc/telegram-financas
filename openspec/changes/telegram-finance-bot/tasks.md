@@ -7,12 +7,12 @@
 
 ## 2. Banco de dados (expense-tracking)
 
-- [ ] 2.1 Definir schema Drizzle da tabela `transactions` (id, amount_cents, description, category, payment_method, occurred_at, raw_message, created_at)
-- [ ] 2.2 Gerar e rodar migration inicial
-- [ ] 2.3 Implementar função `insertTransaction(data)`
-- [ ] 2.4 Implementar função `listTransactionsByPeriod(start, end)`
-- [ ] 2.5 Implementar funções de agregação: `sumTotal(transactions)`, `findBiggest(transactions)`, `sumByCategory(transactions, category)`
-- [ ] 2.6 Implementar helpers de período (início/fim da semana atual e do mês atual, fuso `America/Sao_Paulo`, UTC-3 fixo)
+- [x] 2.1 Definir schema Drizzle da tabela `transactions` (id, amount_cents, description, category, payment_method, occurred_at, raw_message, created_at)
+- [x] 2.2 Gerar e rodar migration inicial
+- [x] 2.3 Implementar função `insertTransaction(data)`
+- [x] 2.4 Implementar função `listTransactionsByPeriod(start, end)`
+- [x] 2.5 Implementar funções de agregação: `sumTotal(transactions)`, `findBiggest(transactions)`, `sumByCategory(transactions, category)`
+- [x] 2.6 Implementar helpers de período (início/fim da semana atual e do mês atual, fuso `America/Sao_Paulo`, UTC-3 fixo)
 
 ## 3. Bot do Telegram (telegram-gateway)
 
