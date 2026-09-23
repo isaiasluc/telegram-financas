@@ -12,7 +12,7 @@ só troca o canal de mensageria.
 - API oficial de bots do Telegram (via `grammy`), long polling — sem webhook/URL pública
 - Anthropic SDK (Claude) para parsing de intenção via tool use / structured output
 
-## Arquitetura (capabilities, ver `openspec/changes/telegram-finance-bot/specs/`)
+## Arquitetura (capabilities, ver `openspec/specs/`)
 
 - `telegram-gateway` — conexão via long polling, filtro por Telegram user ID autorizado, envio de respostas
 - `message-intent-parsing` — LLM converte texto livre em intenção estruturada (`register_expense` | `query_spending` | `unknown`)
