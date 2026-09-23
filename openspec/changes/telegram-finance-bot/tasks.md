@@ -24,10 +24,10 @@
 
 ## 4. Parsing de intenção via LLM (message-intent-parsing)
 
-- [ ] 4.1 Definir schema estruturado (tool use / structured output) da Anthropic para a resposta do LLM: `intent`, campos de gasto, campos de consulta
-- [ ] 4.2 Escrever prompt de sistema com a data/hora atual, lista fixa de categorias e exemplos de cada intenção
-- [ ] 4.3 Implementar função `parseMessage(text, now)` que chama a API e retorna a intenção estruturada tipada
-- [ ] 4.4 Tratar caso de valor monetário ausente/ambíguo como `unknown`
+- [x] 4.1 Definir schema estruturado (tool use / structured output) da Anthropic para a resposta do LLM: `intent`, campos de gasto, campos de consulta
+- [x] 4.2 Escrever prompt de sistema com a data/hora atual, lista fixa de categorias e exemplos de cada intenção
+- [x] 4.3 Implementar função `parseMessage(text, now)` que chama a API e retorna a intenção estruturada tipada
+- [x] 4.4 Tratar caso de valor monetário ausente/ambíguo como `unknown`
 - [ ] 4.5 Testar manualmente com variações de mensagens de registro e consulta (incluindo mensagens fora do domínio)
 
 ## 5. Fluxo de registro de gasto (ponta a ponta)
