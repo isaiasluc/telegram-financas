@@ -28,7 +28,7 @@
 - [x] 4.2 Escrever prompt de sistema com a data/hora atual, lista fixa de categorias e exemplos de cada intenção
 - [x] 4.3 Implementar função `parseMessage(text, now)` que chama a API e retorna a intenção estruturada tipada
 - [x] 4.4 Tratar caso de valor monetário ausente/ambíguo como `unknown`
-- [ ] 4.5 Testar manualmente com variações de mensagens de registro e consulta (incluindo mensagens fora do domínio)
+- [x] 4.5 Testar manualmente com variações de mensagens de registro e consulta (incluindo mensagens fora do domínio)
 
 ## 5. Fluxo de registro de gasto (ponta a ponta)
 
