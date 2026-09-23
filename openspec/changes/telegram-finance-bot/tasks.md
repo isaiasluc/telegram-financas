@@ -28,14 +28,14 @@
 - [x] 4.2 Escrever prompt de sistema com a data/hora atual, lista fixa de categorias e exemplos de cada intenção
 - [x] 4.3 Implementar função `parseMessage(text, now)` que chama a API e retorna a intenção estruturada tipada
 - [x] 4.4 Tratar caso de valor monetário ausente/ambíguo como `unknown`
-- [ ] 4.5 Testar manualmente com variações de mensagens de registro e consulta (incluindo mensagens fora do domínio)
+- [x] 4.5 Testar manualmente com variações de mensagens de registro e consulta (incluindo mensagens fora do domínio)
 
 ## 5. Fluxo de registro de gasto (ponta a ponta)
 
-- [ ] 5.1 Conectar `telegram-gateway` → `message-intent-parsing`: mensagem recebida do dono é enviada para parsing
-- [ ] 5.2 Quando `intent = register_expense`, persistir via `insertTransaction`, incluindo `raw_message`
-- [ ] 5.3 Responder confirmando valor, descrição e categoria registrados (financial-queries: confirmação de registro)
-- [ ] 5.4 Testar ponta a ponta: enviar "almoço em churrascaria do arnaldo 18,96" pelo Telegram e confirmar linha criada no banco e resposta de confirmação recebida
+- [x] 5.1 Conectar `telegram-gateway` → `message-intent-parsing`: mensagem recebida do dono é enviada para parsing
+- [x] 5.2 Quando `intent = register_expense`, persistir via `insertTransaction`, incluindo `raw_message`
+- [x] 5.3 Responder confirmando valor, descrição e categoria registrados (financial-queries: confirmação de registro)
+- [x] 5.4 Testar ponta a ponta: enviar "almoço em churrascaria do arnaldo 18,96" pelo Telegram e confirmar linha criada no banco e resposta de confirmação recebida
 
 ## 6. Fluxo de consultas (ponta a ponta)
 
