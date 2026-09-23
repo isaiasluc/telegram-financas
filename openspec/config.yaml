@@ -1,0 +1,26 @@
+schema: spec-driven
+
+context: |
+  Projeto: bot pessoal de Telegram para controle financeiro (single-user, uso do próprio dono).
+  Stack: Node.js + TypeScript, PostgreSQL (Drizzle ORM), Telegram Bot API oficial
+  (via biblioteca como grammY/Telegraf, com bot token do BotFather — sem risco de
+  banimento, ao contrário de uma biblioteca não-oficial de WhatsApp).
+  Sem frontend React nesta fase — toda interação é via mensagens no Telegram (texto livre).
+  Interpretação de linguagem natural (lançar gasto, perguntar totais/maior gasto/etc.)
+  via LLM (Claude API/Anthropic) que converte a mensagem em uma intenção estruturada
+  (registrar transação, consultar totais, etc.) antes de tocar no banco.
+  Domínio: transações financeiras pessoais — valor, categoria, descrição, data,
+  método de pagamento opcional. Consultas incluem: gasto por período (semana/mês),
+  maior gasto, total por categoria, saldo/orçamento se vier a existir depois.
+  Rodando localmente/self-hosted por enquanto (sem deploy definido ainda).
+  Este projeto é um pivot de um bot equivalente que usava WhatsApp/Baileys — a única
+  diferença de propósito é o canal (Telegram em vez de WhatsApp); todo o resto do
+  domínio (parsing, persistência, consultas) é o mesmo.
+
+rules:
+  proposal:
+    - Deixar explícito que é MVP single-user, sem autenticação multi-tenant
+    - Cobrir o fluxo de registrar gasto por texto livre e consultar gastos por texto livre
+  tasks:
+    - Quebrar em tasks pequenas e sequenciais (setup, conexão Telegram, schema do banco,
+      parsing de intenção via LLM, registro de transação, consultas, respostas formatadas)
