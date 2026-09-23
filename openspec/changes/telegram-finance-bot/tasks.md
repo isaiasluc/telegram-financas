@@ -16,11 +16,11 @@
 
 ## 3. Bot do Telegram (telegram-gateway)
 
-- [ ] 3.1 Criar bot via @BotFather e obter `TELEGRAM_BOT_TOKEN`
-- [ ] 3.2 Implementar conexão via long polling (`getUpdates`) usando a biblioteca escolhida
-- [ ] 3.3 Implementar filtro de remetente: processar apenas mensagens do `OWNER_TELEGRAM_USER_ID`, ignorar demais silenciosamente
-- [ ] 3.4 Implementar função de envio de mensagem de texto de resposta
-- [ ] 3.5 Testar ponta a ponta: enviar uma mensagem de teste pelo Telegram e confirmar recebimento no processo (echo simples)
+- [x] 3.1 Criar bot via @BotFather e obter `TELEGRAM_BOT_TOKEN`
+- [x] 3.2 Implementar conexão via long polling (`getUpdates`) usando a biblioteca escolhida
+- [x] 3.3 Implementar filtro de remetente: processar apenas mensagens do `OWNER_TELEGRAM_USER_ID`, ignorar demais silenciosamente
+- [x] 3.4 Implementar função de envio de mensagem de texto de resposta
+- [x] 3.5 Testar ponta a ponta: enviar uma mensagem de teste pelo Telegram e confirmar recebimento no processo (echo simples)
 
 ## 4. Parsing de intenção via LLM (message-intent-parsing)
 
